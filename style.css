@@ -489,4 +489,30 @@ html {
       font-size: 18px;
     }
   }
+  @media (max-width: 768px) {
+  
+    /* Dashboard Grid */
+    .dashboard-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    /* Dashboard Card Adjustments */
+    .dashboard-card {
+      min-height: auto; /* This will allow card height to adjust to content */
+      padding: 20px 15px;
+    }
+  
+    .dashboard-card h2 {
+      font-size: 20px;
+    }
+  
+    .dashboard-card p, 
+    .dashboard-card ul li, 
+    .dashboard-card a {
+      font-size: 16px;
+    }
+  
+    /* Other mobile adjustments (already added) */
+    /* Hero section, navbar, etc. */
+  }
   
