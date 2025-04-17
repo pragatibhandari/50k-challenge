@@ -427,75 +427,59 @@ html {
 }
 /* Navbar */
 /* === NAVBAR STYLES === */
+/* === CLEAN RESPONSIVE NAVBAR === */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   padding: 15px 20px;
   background-color: #ffffff;
   border-bottom: 1px solid #ddd;
-  position: relative;
-  z-index: 1000;
 }
 
 .logo-img {
-  height: 40px;
+  height: 36px;
   width: auto;
-  max-width: 150px;
+  max-width: 140px;
   object-fit: contain;
 }
 
-.menu-toggle {
-  font-size: 28px;
-  color: #000;
-  cursor: pointer;
-  display: none;
-}
-
 .nav-links {
-  list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links li a {
   text-decoration: none;
   color: #000;
   font-weight: 600;
-  font-size: 16px;
+  font-size: clamp(14px, 2vw, 16px);
+  padding: 8px 10px;
 }
 
-/* === MOBILE STYLES === */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
+/* Make links fit into one row smoothly on smaller screens */
+@media (max-width: 600px) {
   .nav-links {
-    flex-direction: column;
-    background-color: #fff;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    display: none;
-    padding: 20px 0;
-    border-top: 1px solid #ddd;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links li {
-    text-align: center;
-    padding: 10px 0;
+    gap: 6px;
+    justify-content: center;
   }
 
   .nav-links li a {
-    font-size: 18px;
+    padding: 6px 8px;
+  }
+
+  .logo-img {
+    height: 30px;
+    max-width: 100px;
   }
 }
+
 
     /* Dashboard Grid */
     .dashboard-grid {
