@@ -426,71 +426,77 @@ html {
   }
 }
 /* Navbar */
+/* === NAVBAR STYLES === */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background: #ffffff;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #007BFF;
-  }
-  
-  .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-  }
-  
-  .nav-links li a {
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-    font-size: 16px;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  z-index: 1000;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  max-width: 150px;
+  object-fit: contain;
+}
+
+.menu-toggle {
+  font-size: 28px;
+  color: #000;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* === MOBILE STYLES === */
+@media (max-width: 768px) {
   .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
     display: none;
-    font-size: 28px;
-    cursor: pointer;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
   }
-  
-  @media (max-width: 768px) {
-    .menu-toggle {
-      display: block;
-    }
-  
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      background: #fff;
-      position: absolute;
-      top: 70px;
-      left: 0;
-      border-top: 1px solid #ddd;
-    }
-  
-    .nav-links.active {
-      display: flex;
-    }
-  
-    .nav-links li {
-      text-align: center;
-      padding: 15px 0;
-    }
-  
-    .nav-links li a {
-      font-size: 18px;
-    }
+
+  .nav-links.active {
+    display: flex;
   }
-  @media (max-width: 768px) {
-  
+
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links li a {
+    font-size: 18px;
+  }
+}
+
     /* Dashboard Grid */
     .dashboard-grid {
       grid-template-columns: 1fr;
@@ -514,5 +520,18 @@ html {
   
     /* Other mobile adjustments (already added) */
     /* Hero section, navbar, etc. */
+  
+  .logo-img {
+    height: 60px;
+    width: auto;
+    max-width: 150px;
+    object-fit: contain;
+  }
+  
+  @media (max-width: 768px) {
+    .logo-img {
+      height: 45px;
+      max-width: 120px;
+    }
   }
   
