@@ -514,6 +514,16 @@ nav a:hover {
       font-size: 16px;
     }
   
+    .dashboard-card-report{
+      min-height: auto; /* This will allow card height to adjust to content */
+      padding: 20px 15px;
+      font-size: 16px;
+    }
+
+    .dashboard-card-report li{
+      list-style-type: none
+    }
+
     /* Other mobile adjustments (already added) */
     /* Hero section, navbar, etc. */
   
