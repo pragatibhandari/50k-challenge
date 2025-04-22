@@ -283,129 +283,88 @@ html {
     margin-top: 40px;
   }
   
-  .dashboard-card {
-    background: #f9f9f9;
-    border: 1px solid #e0e0e0;
-    border-radius: 12px;
-    padding: 20px;
-    min-height: 250px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.3s;
-  }
-  
-  .dashboard-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .dashboard-card h2 {
-    font-size: 22px;
-    color: #007BFF;
-    margin-bottom: 10px;
-  }
-  
-  .dashboard-card ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .dashboard-card ul li {
-    margin-bottom: 8px;
-  }
-  
-  .dashboard-card p, .dashboard-card a {
-    color: #333;
-    text-decoration: none;
-  }
-  
-  .dashboard-card a:hover {
-    text-decoration: underline;
-  }
-  
-  @media (max-width: 768px) {
-    .dashboard-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  .dashboard-card:nth-child(1) {
-    background: #ffe4e1; /* soft pink */
-  }
-  
-  .dashboard-card:nth-child(2) {
-    background: #e0f7fa; /* light cyan */
-  }
-  
-  .dashboard-card:nth-child(3) {
-    background: #f1f8e9; /* very light green */
-  }
-  
-  .dashboard-card:nth-child(4) {
-    background: #fff3e0; /* peachy orange */
-  }
-  
-  .dashboard-card:nth-child(5) {
-    background: #e8eaf6; /* lavender blue */
-  }
-  
-  .dashboard-card:nth-child(6) {
-    background: #fce4ec; /* light pink purple */
-  }
-  
-  .progress-bar {
-    background: #e0e0e0;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 15px;
-    height: 10px;
-  }
-  
-  .progress {
-    width: 30%; /* Adjust dynamically if needed */
-    height: 10px;
-    background: #007BFF;
-    transition: width 2s ease;
-  }
-  /* Mobile Responsive Adjustments */
+/* ========================
+   Dashboard Grid Only (Updated Styles)
+========================= */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.dashboard-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+}
+
+.dashboard-card h2 {
+  font-size: 22px;
+  color: #007BFF;
+  margin-bottom: 10px;
+}
+
+.dashboard-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.dashboard-card ul li {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.dashboard-card p,
+.dashboard-card a {
+  color: #333;
+}
+
+.dashboard-card a:hover {
+  text-decoration: underline;
+}
+
+/* ========================
+   Color Variants for Cards
+========================= */
+.dashboard-card:nth-child(1) { background-color: #fff3f3; }
+.dashboard-card:nth-child(2) { background-color: #e0f7fa; }
+.dashboard-card:nth-child(3) { background-color: #f1f8e9; }
+.dashboard-card:nth-child(4) { background-color: #fff8e1; }
+.dashboard-card:nth-child(5) { background-color: #e8eaf6; }
+.dashboard-card:nth-child(6) { background-color: #fce4ec; }
+
+/* ========================
+   Progress Bar
+========================= */
+.progress-bar {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 10px;
+  margin-bottom: 15px;
+}
+
+.progress {
+  width: 30%;
+  height: 100%;
+  background-color: #007BFF;
+  transition: width 2s ease;
+}
+
 @media (max-width: 768px) {
-  
-  /* Dashboard Grid */
   .dashboard-grid {
     grid-template-columns: 1fr;
   }
 
-  /* Hero About Section Split */
-  .hero-about-split {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 20px;
-  }
-
-  .hero-about-text {
-    margin-bottom: 20px;
-  }
-
-  .hero-about-text h2 {
-    font-size: 24px;
-  }
-
-  .hero-about-text p {
-    font-size: 16px;
-  }
-
-  .hero-about-img {
-    justify-content: center;
-  }
-
-  .hero-split-img {
-    width: 180px;
-    height: 180px;
-  }
-
-  /* Dashboard Card Adjustments */
   .dashboard-card {
-    min-height: auto;
     padding: 20px 15px;
   }
 
@@ -413,116 +372,13 @@ html {
     font-size: 20px;
   }
 
-  .dashboard-card p, 
-  .dashboard-card ul li, 
+  .dashboard-card ul li,
+  .dashboard-card p,
   .dashboard-card a {
     font-size: 16px;
   }
-
-  /* Navigation */
-  nav a {
-    margin: 0 5px;
-    font-size: 14px;
-  }
-}
-/* Navbar */
-/* === NAVBAR STYLES === */
-nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 10px;
-  font-weight: 600;
-  font-size: 16px;
 }
 
-nav a {
-  text-decoration: none;
-  color: #000;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #007BFF;
-}
-
-#main-header {
-  background-color: white;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-#main-header.scrolled {
-  background-color: #f2f2f2;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-
-/* === MOBILE STYLES === */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    background-color: #fff;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    display: none;
-    padding: 20px 0;
-    border-top: 1px solid #ddd;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links li {
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  .nav-links li a {
-    font-size: 18px;
-  }
-}
-
-    /* Dashboard Grid */
-    .dashboard-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    /* Dashboard Card Adjustments */
-    .dashboard-card {
-      min-height: auto; /* This will allow card height to adjust to content */
-      padding: 20px 15px;
-    }
-  
-    .dashboard-card h2 {
-      font-size: 20px;
-    }
-  
-    .dashboard-card p, 
-    .dashboard-card ul li, 
-    .dashboard-card a {
-      font-size: 16px;
-    }
-  
-    .dashboard-card-report{
-      min-height: auto; /* This will allow card height to adjust to content */
-      padding: 20px 15px;
-      font-size: 16px;
-    }
-
-    .dashboard-card-report li{
-      list-style-type: none
-    }
 
     /* Other mobile adjustments (already added) */
     /* Hero section, navbar, etc. */
