@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', () => {
     const progress = document.querySelector('.progress');
     if (progress) {
-      progress.style.width = '0%'; // Update this value based on your progress
+      progress.style.width = '0.1%'; // Update this value based on your progress
     }
   
     const backToTopBtn = document.getElementById('backToTopBtn');
