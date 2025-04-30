@@ -37,3 +37,36 @@ window.addEventListener('scroll', () => {
     header.classList.remove('scrolled');
   }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const totalRevenue = 0; // Example: Change this dynamically later
+  const totalProfit = 0;   // Example: Update this too
+
+  const revenueProgress = document.getElementById('revenue-progress');
+  const profitProgress = document.getElementById('profit-progress');
+
+  const revenueAmount = document.getElementById('revenue-amount');
+  const profitAmount = document.getElementById('profit-amount');
+
+  // Update values
+  revenueProgress.style.width = (totalRevenue / 50000 * 100) + '%';
+  profitProgress.style.width = (totalProfit / 50000 * 100) + '%';
+
+  revenueAmount.textContent = `€${totalRevenue} / €50,000`;
+  profitAmount.textContent = `€${totalProfit}`;
+
+  // Activate Milestones
+  if (totalRevenue >= 5000) {
+    document.getElementById('milestone-5k').style.backgroundColor = '#c3f7c0';
+  }
+  if (totalRevenue >= 10000) {
+    document.getElementById('milestone-10k').style.backgroundColor = '#c3f7c0';
+  }
+  if (totalRevenue >= 25000) {
+    document.getElementById('milestone-25k').style.backgroundColor = '#c3f7c0';
+  }
+  if (totalRevenue >= 50000) {
+    document.getElementById('milestone-50k').style.backgroundColor = '#c3f7c0';
+  }
+});
+
