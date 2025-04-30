@@ -482,3 +482,55 @@ html {
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   }
   
+  #video-gallery {
+  padding: 40px 20px;
+  background-color: #ffffff;
+}
+
+#video-gallery h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007BFF;
+}
+
+details {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+  padding: 15px;
+}
+
+summary {
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 15px;
+}
+
+.video-grid a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  width: 150px;
+}
+
+.video-grid img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.video-grid span {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #333;
+}
+
