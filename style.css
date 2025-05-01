@@ -276,8 +276,8 @@ hr {
 }
 
 .hero-split-img {
-  width: 200px;
-  height: 250px;
+  width: 205px;
+  height: 280px;
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -708,4 +708,11 @@ summary::-webkit-details-marker {
   .feedback-form button {
     font-size: 14px;
   }
+}
+
+.report-list{
+}
+
+.report-list li{
+  list-style-type: none;
 }
