@@ -592,12 +592,12 @@ summary::-webkit-details-marker {
 .feedback-form input {
   font-size: 15px;
   padding: 12px 14px;
-  border: 1px solid #ccc;
+  border: 0.5px solid #ccc;
   border-radius: 8px;
   resize: vertical;
-  width: 99%;
+  width: 95%;
   background: var(--white);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 2px 6px rgba(222, 207, 207, 0.02);
 }
 
 .feedback-form textarea {
