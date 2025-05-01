@@ -74,3 +74,15 @@ function toggleWeek(header) {
   const content = header.nextElementSibling;
   content.style.display = content.style.display === 'block' ? 'none' : 'block';
 }
+
+function loadVideo(element, videoId) {
+  const iframe = document.createElement('iframe');
+  iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+  iframe.frameBorder = 0;
+  iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+  iframe.allowFullscreen = true;
+  iframe.width = "100%";
+  iframe.height = "225";
+
+  element.parentNode.replaceChild(iframe, element);
+}
