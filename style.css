@@ -12,6 +12,7 @@
   --white: #ffffff;
   --blue-dark: #005fa3;
   --blue-bright: #0077cc;
+  --cream:rgb(225, 197, 197);
 
   --card-bg-1: #fff3f3;
   --card-bg-2: #e0f7fa;
@@ -385,10 +386,13 @@ hr {
 }
 
 #financial-dashboard {
-  padding: 50px 20px;
-  background: var(--light-gray);
-  border-radius: 8px;
-  margin-top: 40px;
+  padding: 60px 20px;
+  background: var(--feedback);
+  border-top: 2px solid var(--border-gray);
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 60px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
 }
 
 #financial-dashboard h2 {
@@ -448,7 +452,12 @@ hr {
 
 #video-gallery {
   padding: 40px 20px;
-  background-color: var(--white);
+  background-color: var(--cream);
+  padding: 60px 20px;
+  border-top: 2px solid var(--border-gray);
+  border-radius: 12px;
+  margin-top: 60px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
 }
 
 #video-gallery h2 {
@@ -625,6 +634,11 @@ summary::-webkit-details-marker {
 
   .dashboard-grid {
     grid-template-columns: 1fr;
+    padding: 60px 20px;
+    background: var(--cream);
+    border-radius: 12px;
+    margin-top: 60px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
   }
 
   .dashboard-card {
