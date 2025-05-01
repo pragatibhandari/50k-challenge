@@ -651,4 +651,20 @@ summary {
   .video-thumbnail:hover {
     transform: scale(1.02);
   }
+  .video-fullscreen-trigger {
+    max-width: 200px;
+    cursor: pointer;
+    margin: 0 auto;
+  }
+  
+  .video-fullscreen-trigger img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+  }
+  
+  .video-fullscreen-trigger img:hover {
+    transform: scale(1.05);
+  }
   

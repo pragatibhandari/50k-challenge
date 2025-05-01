@@ -86,3 +86,28 @@ function loadVideo(element, videoId) {
 
   element.parentNode.replaceChild(iframe, element);
 }
+function playFullscreenVideo(videoId) {
+  const iframe = document.createElement('iframe');
+  iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+  iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen";
+  iframe.frameBorder = "0";
+  iframe.style.position = "fixed";
+  iframe.style.top = "0";
+  iframe.style.left = "0";
+  iframe.style.width = "100vw";
+  iframe.style.height = "100vh";
+  iframe.style.zIndex = "9999";
+  iframe.style.background = "#000";
+
+  document.body.appendChild(iframe);
+
+  // Remove iframe when ESC is pressed
+  function closeOnEsc(event) {
+    if (event.key === "Escape") {
+      iframe.remove();
+      document.removeEventListener("keydown", closeOnEsc);
+    }
+  }
+
+  document.addEventListener("keydown", closeOnEsc);
+}
