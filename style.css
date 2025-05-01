@@ -614,4 +614,41 @@ summary {
   .video-grid span:hover {
     background-color: #005fa3;
   }
+  .hobby-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .hobby-card {
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.03);
+    transition: transform 0.2s ease;
+  }
+  
+  .hobby-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+  }
+  
+  .hobby-card .emoji {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .hobby-card h3 {
+    margin: 0 0 8px;
+    color: #007BFF;
+    font-size: 18px;
+  }
+  
+  .hobby-card p {
+    font-size: 14px;
+    color: #444;
+  }
   
