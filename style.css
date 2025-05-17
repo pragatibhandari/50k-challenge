@@ -765,3 +765,22 @@ summary::-webkit-details-marker {
   }
 }
 
+.report-button {
+  display: inline-block;
+  background-color: var(--primary-dark);
+  color: #faf5f5;
+  padding: 5px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-top: 5px;
+  width: 250px;
+  text-align: center;
+}
+
+.report-button:hover {
+  background-color: var(--primary-color);
+}
