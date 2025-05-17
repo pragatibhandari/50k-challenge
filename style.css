@@ -779,8 +779,10 @@ summary::-webkit-details-marker {
   margin-top: 5px;
   width: 250px;
   text-align: center;
+  text-decoration: none;
 }
 
 .report-button:hover {
   background-color: var(--primary-color);
 }
+
