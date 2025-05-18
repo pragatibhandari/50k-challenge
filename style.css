@@ -1,19 +1,32 @@
 :root {
-  --primary-color: #007BFF;
+  /* 🔷 Primary Colors */
+  --primary-color: #061628;
   --primary-dark: #0056b3;
-  --feedback: #e6dded;
+
+  /* 🟢 Accent & Feedback */
   --accent-green: #28a745;
+  --feedback: #e6dded;
+
+  /* ⚪ Neutral Backgrounds */
+  --white: #ffffff;
   --light-gray: #f9f9f9;
   --mid-gray: #e0e0e0;
-  /*  --border-gray: #ddd; */
+  /* --border-gray: #ddd; */ /* Optional: uncomment if needed */
+
+  /* 🔤 Text Colors */
   --text-dark: #222;
   --text-mid: #555;
   --text-light: #777;
-  --white: #ffffff;
+
+  /* 🔵 Brand Blues */
   --blue-dark: #005fa3;
   --blue-bright: #0077cc;
-  --cream:rgb(225, 197, 197);
 
+  /* 🌿 Additional Tones */
+  --cream: rgb(225, 197, 197);
+  --card: #6750ac3a;
+
+  /* 🧩 Card Background Variants */
   --card-bg-1: #fff3f3;
   --card-bg-2: #e0f7fa;
   --card-bg-3: #f1f8e9;
@@ -21,6 +34,7 @@
   --card-bg-5: #e8eaf6;
   --card-bg-6: #fce4ec;
 }
+
 
 html {
   scroll-behavior: smooth;
@@ -411,7 +425,7 @@ hr {
 
 
 .metric-card {
-  background: var(--white);
+  background: var(--card);
   border-radius: 8px;
   padding: 20px;
   width: 300px;
@@ -471,7 +485,7 @@ details {
   margin-bottom: 20px;
   border: 1px solid var(--border-gray);
   border-radius: 8px;
-  background: var(--light-gray);
+  background: var(--card);
   padding: 15px;
 }
 
@@ -786,3 +800,41 @@ summary::-webkit-details-marker {
   background-color: var(--primary-color);
 }
 
+.support-section {
+  background-color: #fffbe6; /* Soft warm yellow background */
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 12px;
+  margin: 60px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+}
+
+.support-section h2 {
+  font-size: 28px;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.support-section p {
+  font-size: 16px;
+  color: #444;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .support-section {
+    padding: 40px 16px;
+  }
+
+  .support-section h2 {
+    font-size: 24px;
+  }
+
+  .support-section p {
+    font-size: 15px;
+  }
+}
